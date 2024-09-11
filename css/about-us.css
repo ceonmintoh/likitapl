@@ -1,0 +1,235 @@
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  line-height: 25px;
+}
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.responsive-container-block.bigContainer {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: cover;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-repeat: no-repeat;
+}
+
+.responsive-container-block.Container {
+  max-width: 1000px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-bottom: 250px;
+  margin-left: auto;
+  background-color: #1261cfc1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.text-blk.heading {
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 800;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  color: white;
+}
+
+.text-blk.subHeading {
+  font-size: 20px;
+  line-height: 26px;
+  margin-top: 0;
+  text-align: justify;
+  color: white;
+}
+.social-media {
+  padding: 2rem 0 0 0;
+  margin-top: -40px;
+}
+
+.social-media h3 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #002aa7, #0080ff); /* Change to dark blue */
+  color: #020353;
+  text-align: center;
+  line-height: 35px;
+  transition: 0.3s;
+  margin: 0.9rem;
+  margin-top: 0;
+  color: white;
+}
+
+.social-icons a:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .text-blk.heading {
+    font-size: 55px;
+    line-height: 65px;
+  }
+
+  .text-blk.subHeading {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .socialIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .text-blk.subHeading {
+    line-height: 27px;
+  }
+
+  .text-blk.heading {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+
+  .social-icon {
+    margin: 0 25px 0 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .text-blk.heading {
+    font-size: 45px;
+    line-height: 55px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+
+  .text-blk.subHeading {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+  }
+
+  .social-icons-container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-blk.subHeading {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .text-blk.heading {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .social-icon {
+    margin: 0 20px 0 20px;
+  }
+}
+
+.image-about{
+  width: 200px;
+  height: 200px;
+  border: 4px solid white;
+  border-radius: 50%;
+  float: left;
+  shape-outside: url(../img/about-us.png);
+  shape-margin: 15px;
+  margin: 10px;
+  filter: drop-shadow(-3px -3px 2px rgba(255, 255, 255,0.3))
+  drop-shadow(5px 5px 5px rgba(0, 0, 0,0.2))
+  drop-shadow(15px 15px 15px rgba(0, 0, 0,0.2));
+}
+
+.hrtage {
+  margin: 20px;
+  border-top: 4px solid white;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 100px;
+  position: relative;
+  animation-duration: 2s;
+  animation-name: hr;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  cursor: pointer;
+}
+
+@keyframes hr {
+  from {
+      width: 0%;
+  }
+
+  to {
+      width: 97%;
+  }
+}

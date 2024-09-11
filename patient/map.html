@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- For making AJAX requests -->
+    <script>
+        var map = L.map('map').setView([0, 0], 2); // Initial center and zoom level
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Make AJAX request to your API
+        axios.get('api.php')
+            .then(function (response) {
+                // Loop through the response data and add markers to the map
+                response.data.forEach(function (marker) {
+                    // Create a popup with all data
+                    var popupContent = '<b>Name:</b> ' + marker.name +
+                                       '<br><b>Latitude:</b> ' + marker.latitude +
+                                       '<br><b>Longitude:</b> ' + marker.longitude;
+
+                    // Create marker with popup and add to the map
+                    L.marker([parseFloat(marker.latitude), parseFloat(marker.longitude)])
+                        .bindPopup(popupContent)
+                        .addTo(map);
+                });
+            })
+            .catch(function (error) {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+</body>
+</html>
