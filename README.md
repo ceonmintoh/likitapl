@@ -21,7 +21,7 @@ Likita is an intelligent online healthcare platform designed to provide immediat
 
 ## Setup Instructions
 1. Clone the repository: `git clone <repository-url>`
-2. Navigate to the project directory: `cd Likita`
+2. Navigate to the project directory: `cd Likitapl`
 3. Setup the database:
    - Create a MySQL database.
    - Import the database schema from `likitadb.sql`.
